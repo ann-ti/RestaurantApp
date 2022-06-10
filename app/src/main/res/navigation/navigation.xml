@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/restaurantsFragment">
+
+    <fragment
+        android:id="@+id/restaurantsFragment"
+        android:name="com.annti.restaurantapp.presentation.restaurants.RestaurantsFragment"
+        android:label="RestaurantsFragment"
+        tools:layout="@layout/fragment_restaurants">
+        <action
+            android:id="@+id/action_restaurantsFragment_to_hitsFragment"
+            app:destination="@id/hitsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/hitsFragment"
+        android:name="com.annti.restaurantapp.presentation.hits.HitsFragment"
+        android:label="HitsFragment"
+        tools:layout="@layout/fragment_hits">
+        <action
+            android:id="@+id/action_hitsFragment_to_reviewsFragment"
+            app:destination="@id/reviewsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/reviewsFragment"
+        android:name="com.annti.restaurantapp.presentation.reviews.ReviewsFragment"
+        android:label="ReviewsFragment"
+        tools:layout="@layout/fragment_reviews"/>
+</navigation>
